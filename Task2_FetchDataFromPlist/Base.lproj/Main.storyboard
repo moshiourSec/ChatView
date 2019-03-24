@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task2_FetchDataFromPlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="403-IJ-fZ4">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ixq-Ph-oxF">
+                                <rect key="frame" x="0.0" y="44" width="375" height="666"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f7H-2v-gDU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aeJ-9V-IbA"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNj-cn-duN">
+                                <rect key="frame" x="148" y="718" width="79" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="mc1-A0-Pra"/>
+                                </constraints>
+                                <state key="normal" image="multimedia"/>
+                                <connections>
+                                    <action selector="addButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxH-FT-QGa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="403-IJ-fZ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B79-fm-cfb"/>
+                            <constraint firstItem="ixq-Ph-oxF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IMp-Zo-6gK"/>
+                            <constraint firstItem="403-IJ-fZ4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lbl-cA-SYu"/>
+                            <constraint firstItem="ixq-Ph-oxF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cII-Vv-Y4p"/>
+                            <constraint firstItem="403-IJ-fZ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kLR-Gp-0q3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pNj-cn-duN" secondAttribute="bottom" constant="10" id="nhn-I6-gXg"/>
+                            <constraint firstItem="pNj-cn-duN" firstAttribute="top" secondItem="ixq-Ph-oxF" secondAttribute="bottom" constant="8" id="omq-jT-nW0"/>
+                            <constraint firstItem="pNj-cn-duN" firstAttribute="centerX" secondItem="ixq-Ph-oxF" secondAttribute="centerX" id="po6-k6-kqB"/>
+                            <constraint firstItem="403-IJ-fZ4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tvn-za-Z5W"/>
+                            <constraint firstItem="pNj-cn-duN" firstAttribute="top" secondItem="ixq-Ph-oxF" secondAttribute="bottom" constant="8" symbolic="YES" id="y8v-1D-Euc"/>
+                            <constraint firstItem="ixq-Ph-oxF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zuj-i7-ZNW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ixq-Ph-oxF" id="Kzv-JW-EYz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="131.52709359605913"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="736" height="1309"/>
+        <image name="multimedia" width="50" height="50"/>
+    </resources>
+</document>
